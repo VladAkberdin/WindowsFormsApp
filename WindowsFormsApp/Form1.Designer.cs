@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label фамилияLabel;
             System.Windows.Forms.Label имяLabel;
             System.Windows.Forms.Label отчествоLabel;
             System.Windows.Forms.Label адресLabel;
             System.Windows.Forms.Label дата_рожденияLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.database1DataSet = new WindowsFormsApp.Database1DataSet();
             this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableTableAdapter = new WindowsFormsApp.Database1DataSetTableAdapters.TableTableAdapter();
@@ -53,7 +53,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tableBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.idTextBox = new System.Windows.Forms.TextBox();
             this.фамилияTextBox = new System.Windows.Forms.TextBox();
             this.имяTextBox = new System.Windows.Forms.TextBox();
             this.отчествоTextBox = new System.Windows.Forms.TextBox();
@@ -70,6 +69,60 @@
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingNavigator)).BeginInit();
             this.tableBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(12, 34);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(20, 13);
+            idLabel.TabIndex = 1;
+            idLabel.Text = "Id:";
+            // 
+            // фамилияLabel
+            // 
+            фамилияLabel.AutoSize = true;
+            фамилияLabel.Location = new System.Drawing.Point(12, 62);
+            фамилияLabel.Name = "фамилияLabel";
+            фамилияLabel.Size = new System.Drawing.Size(59, 13);
+            фамилияLabel.TabIndex = 3;
+            фамилияLabel.Text = "Фамилия:";
+            // 
+            // имяLabel
+            // 
+            имяLabel.AutoSize = true;
+            имяLabel.Location = new System.Drawing.Point(12, 90);
+            имяLabel.Name = "имяLabel";
+            имяLabel.Size = new System.Drawing.Size(32, 13);
+            имяLabel.TabIndex = 5;
+            имяLabel.Text = "Имя:";
+            // 
+            // отчествоLabel
+            // 
+            отчествоLabel.AutoSize = true;
+            отчествоLabel.Location = new System.Drawing.Point(12, 118);
+            отчествоLabel.Name = "отчествоLabel";
+            отчествоLabel.Size = new System.Drawing.Size(58, 13);
+            отчествоLabel.TabIndex = 7;
+            отчествоLabel.Text = "Отчество:";
+            // 
+            // адресLabel
+            // 
+            адресLabel.AutoSize = true;
+            адресLabel.Location = new System.Drawing.Point(12, 146);
+            адресLabel.Name = "адресLabel";
+            адресLabel.Size = new System.Drawing.Size(41, 13);
+            адресLabel.TabIndex = 9;
+            адресLabel.Text = "Адрес:";
+            // 
+            // дата_рожденияLabel
+            // 
+            дата_рожденияLabel.AutoSize = true;
+            дата_рожденияLabel.Location = new System.Drawing.Point(12, 175);
+            дата_рожденияLabel.Name = "дата_рожденияLabel";
+            дата_рожденияLabel.Size = new System.Drawing.Size(93, 13);
+            дата_рожденияLabel.TabIndex = 11;
+            дата_рожденияLabel.Text = "Дата рождения:";
             // 
             // database1DataSet
             // 
@@ -216,32 +269,6 @@
             this.tableBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.tableBindingNavigatorSaveItem.Click += new System.EventHandler(this.TableBindingNavigatorSaveItem_Click);
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(12, 34);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(20, 13);
-            idLabel.TabIndex = 1;
-            idLabel.Text = "Id:";
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(111, 31);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(200, 22);
-            this.idTextBox.TabIndex = 2;
-            // 
-            // фамилияLabel
-            // 
-            фамилияLabel.AutoSize = true;
-            фамилияLabel.Location = new System.Drawing.Point(12, 62);
-            фамилияLabel.Name = "фамилияLabel";
-            фамилияLabel.Size = new System.Drawing.Size(59, 13);
-            фамилияLabel.TabIndex = 3;
-            фамилияLabel.Text = "Фамилия:";
-            // 
             // фамилияTextBox
             // 
             this.фамилияTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Фамилия", true));
@@ -249,15 +276,6 @@
             this.фамилияTextBox.Name = "фамилияTextBox";
             this.фамилияTextBox.Size = new System.Drawing.Size(200, 22);
             this.фамилияTextBox.TabIndex = 4;
-            // 
-            // имяLabel
-            // 
-            имяLabel.AutoSize = true;
-            имяLabel.Location = new System.Drawing.Point(12, 90);
-            имяLabel.Name = "имяLabel";
-            имяLabel.Size = new System.Drawing.Size(32, 13);
-            имяLabel.TabIndex = 5;
-            имяLabel.Text = "Имя:";
             // 
             // имяTextBox
             // 
@@ -267,15 +285,6 @@
             this.имяTextBox.Size = new System.Drawing.Size(200, 22);
             this.имяTextBox.TabIndex = 6;
             // 
-            // отчествоLabel
-            // 
-            отчествоLabel.AutoSize = true;
-            отчествоLabel.Location = new System.Drawing.Point(12, 118);
-            отчествоLabel.Name = "отчествоLabel";
-            отчествоLabel.Size = new System.Drawing.Size(58, 13);
-            отчествоLabel.TabIndex = 7;
-            отчествоLabel.Text = "Отчество:";
-            // 
             // отчествоTextBox
             // 
             this.отчествоTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Отчество", true));
@@ -284,15 +293,6 @@
             this.отчествоTextBox.Size = new System.Drawing.Size(200, 22);
             this.отчествоTextBox.TabIndex = 8;
             // 
-            // адресLabel
-            // 
-            адресLabel.AutoSize = true;
-            адресLabel.Location = new System.Drawing.Point(12, 146);
-            адресLabel.Name = "адресLabel";
-            адресLabel.Size = new System.Drawing.Size(41, 13);
-            адресLabel.TabIndex = 9;
-            адресLabel.Text = "Адрес:";
-            // 
             // адресTextBox
             // 
             this.адресTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Адрес", true));
@@ -300,15 +300,6 @@
             this.адресTextBox.Name = "адресTextBox";
             this.адресTextBox.Size = new System.Drawing.Size(200, 22);
             this.адресTextBox.TabIndex = 10;
-            // 
-            // дата_рожденияLabel
-            // 
-            дата_рожденияLabel.AutoSize = true;
-            дата_рожденияLabel.Location = new System.Drawing.Point(12, 175);
-            дата_рожденияLabel.Name = "дата_рожденияLabel";
-            дата_рожденияLabel.Size = new System.Drawing.Size(93, 13);
-            дата_рожденияLabel.TabIndex = 11;
-            дата_рожденияLabel.Text = "Дата рождения:";
             // 
             // дата_рожденияDateTimePicker
             // 
@@ -326,7 +317,6 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(idLabel);
-            this.Controls.Add(this.idTextBox);
             this.Controls.Add(фамилияLabel);
             this.Controls.Add(this.фамилияTextBox);
             this.Controls.Add(имяLabel);
@@ -372,7 +362,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton tableBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox фамилияTextBox;
         private System.Windows.Forms.TextBox имяTextBox;
         private System.Windows.Forms.TextBox отчествоTextBox;
