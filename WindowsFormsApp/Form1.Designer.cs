@@ -272,7 +272,7 @@
             // фамилияTextBox
             // 
             this.фамилияTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Фамилия", true));
-            this.фамилияTextBox.Location = new System.Drawing.Point(111, 59);
+            this.фамилияTextBox.Location = new System.Drawing.Point(111, 62);
             this.фамилияTextBox.Name = "фамилияTextBox";
             this.фамилияTextBox.Size = new System.Drawing.Size(200, 22);
             this.фамилияTextBox.TabIndex = 4;
