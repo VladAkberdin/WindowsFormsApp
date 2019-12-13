@@ -323,6 +323,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
@@ -337,6 +338,8 @@
             this.Controls.Add(дата_рожденияLabel);
             this.Controls.Add(this.дата_рожденияDateTimePicker);
             this.Controls.Add(this.tableBindingNavigator);
+            this.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ForeColor = System.Drawing.SystemColors.Control;
             this.Name = "Form1";
             this.Text = "Данные";
             this.Load += new System.EventHandler(this.Form1_Load);
