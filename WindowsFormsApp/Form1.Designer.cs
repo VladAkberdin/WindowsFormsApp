@@ -36,10 +36,6 @@
             System.Windows.Forms.Label адресLabel;
             System.Windows.Forms.Label дата_рожденияLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.database1DataSet = new WindowsFormsApp.Database1DataSet();
-            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tableTableAdapter = new WindowsFormsApp.Database1DataSetTableAdapters.TableTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp.Database1DataSetTableAdapters.TableAdapterManager();
             this.tableBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -58,16 +54,23 @@
             this.отчествоTextBox = new System.Windows.Forms.TextBox();
             this.адресTextBox = new System.Windows.Forms.TextBox();
             this.дата_рожденияDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database1DataSet = new WindowsFormsApp.Database1DataSet();
+            this.tableTableAdapter = new WindowsFormsApp.Database1DataSetTableAdapters.TableTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApp.Database1DataSetTableAdapters.TableAdapterManager();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             фамилияLabel = new System.Windows.Forms.Label();
             имяLabel = new System.Windows.Forms.Label();
             отчествоLabel = new System.Windows.Forms.Label();
             адресLabel = new System.Windows.Forms.Label();
             дата_рожденияLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingNavigator)).BeginInit();
             this.tableBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // idLabel
@@ -123,26 +126,6 @@
             дата_рожденияLabel.Size = new System.Drawing.Size(93, 13);
             дата_рожденияLabel.TabIndex = 11;
             дата_рожденияLabel.Text = "Дата рождения:";
-            // 
-            // database1DataSet
-            // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tableBindingSource
-            // 
-            this.tableBindingSource.DataMember = "Table";
-            this.tableBindingSource.DataSource = this.database1DataSet;
-            // 
-            // tableTableAdapter
-            // 
-            this.tableTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.TableTableAdapter = this.tableTableAdapter;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApp.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // tableBindingNavigator
             // 
@@ -272,7 +255,7 @@
             // фамилияTextBox
             // 
             this.фамилияTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Фамилия", true));
-            this.фамилияTextBox.Location = new System.Drawing.Point(111, 62);
+            this.фамилияTextBox.Location = new System.Drawing.Point(111, 59);
             this.фамилияTextBox.Name = "фамилияTextBox";
             this.фамилияTextBox.Size = new System.Drawing.Size(200, 22);
             this.фамилияTextBox.TabIndex = 4;
@@ -310,12 +293,61 @@
             this.дата_рожденияDateTimePicker.TabIndex = 12;
             this.дата_рожденияDateTimePicker.Value = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             // 
+            // tableBindingSource
+            // 
+            this.tableBindingSource.DataMember = "Table";
+            this.tableBindingSource.DataSource = this.database1DataSet;
+            // 
+            // database1DataSet
+            // 
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tableTableAdapter
+            // 
+            this.tableTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.TableTableAdapter = this.tableTableAdapter;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApp.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(15, 253);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 32);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(343, 60);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(340, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(idLabel);
             this.Controls.Add(фамилияLabel);
             this.Controls.Add(this.фамилияTextBox);
@@ -333,11 +365,11 @@
             this.Name = "Form1";
             this.Text = "Данные";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingNavigator)).EndInit();
             this.tableBindingNavigator.ResumeLayout(false);
             this.tableBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,6 +399,9 @@
         private System.Windows.Forms.TextBox отчествоTextBox;
         private System.Windows.Forms.TextBox адресTextBox;
         private System.Windows.Forms.DateTimePicker дата_рожденияDateTimePicker;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
